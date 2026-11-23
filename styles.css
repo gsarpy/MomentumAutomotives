@@ -180,6 +180,17 @@ textarea { resize: vertical; }
 .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); }
 .hours td:last-child { text-align: right; color: var(--muted); }
 .contact-form h3 { margin-bottom: 1em; }
+.contact-split { align-items: start; }
+.contact-split .contact-info { grid-column: 1; grid-row: 1; }
+.contact-split .contact-hours { grid-column: 1; grid-row: 2; }
+.contact-split .contact-form { grid-column: 2; grid-row: 1 / span 2; }
+.contact-split:not(.no-form) { grid-template-rows: auto 1fr; row-gap: 32px; }
+.contact-split.no-form .contact-hours { grid-column: 2; grid-row: 1; align-self: end; }
+.contact-list { margin-bottom: 0; }
+@media (max-width: 880px) {
+  .contact-split .contact-info, .contact-split .contact-hours, .contact-split .contact-form,
+  .contact-split.no-form .contact-hours { grid-column: 1; grid-row: auto; }
+}
 .map-wrap { margin-top: 56px; }
 .map-wrap iframe { width: 100%; height: 360px; border: 1px solid var(--line); border-radius: var(--radius); filter: grayscale(.6) invert(.9) hue-rotate(180deg); }
 

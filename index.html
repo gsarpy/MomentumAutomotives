@@ -181,8 +181,8 @@
     </section>
 
     <section class="section" id="contact">
-      <div class="container split">
-        <div>
+      <div class="container split contact-split no-form" id="contactSplit">
+        <div class="contact-info">
           <p class="eyebrow">Visit or Contact</p>
           <h2>Come see us</h2>
           <ul class="contact-list">
@@ -190,13 +190,16 @@
             <li><span>Phone (call or text)</span><a href="tel:+19493266431" data-phone-link><strong data-phone>(949) 326-6431</strong></a></li>
             <li><span>Email</span><a href="mailto:hello@momentumautomotives.com" data-email-link><strong data-email>hello@momentumautomotives.com</strong></a></li>
           </ul>
+        </div>
+        <div class="contact-hours">
           <h3 class="hours-title">Hours</h3>
           <table class="hours">
             <tr><td>Monday – Saturday</td><td>9:00 AM – 7:00 PM</td></tr>
             <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
           </table>
         </div>
-        <form class="card contact-form" id="contactForm">
+        <!-- Contact form: hidden until email sending is set up. Turn on with showContactForm in site-config.js. -->
+        <form class="card contact-form" id="contactForm" hidden>
           <h3>Send us a message</h3>
           <div class="row">
             <label>Name<input name="name" required autocomplete="name" /></label>

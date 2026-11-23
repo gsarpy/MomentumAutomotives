@@ -123,6 +123,12 @@
   $$("#calc input, #calc select").forEach(i => i.addEventListener("input", calc));
   calc();
 
+  // Contact form (hidden unless enabled in site-config.js)
+  if (S.showContactForm) {
+    $("#contactForm").hidden = false;
+    $("#contactSplit").classList.remove("no-form");
+  }
+
   // Contact form -> mailto
   $("#contactForm").addEventListener("submit", e => {
     e.preventDefault();
