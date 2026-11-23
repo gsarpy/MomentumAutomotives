@@ -48,6 +48,7 @@
           <li><strong>Inspected</strong><span>Every vehicle</span></li>
           <li><strong>Financing</strong><span>Options available</span></li>
           <li><strong>Trade-Ins</strong><span>Welcome</span></li>
+          <li><strong>Se Habla Español</strong><span>We speak Spanish</span></li>
         </ul>
       </div>
     </section>
@@ -164,11 +165,15 @@
       <div class="container">
         <p class="eyebrow">The Lot</p>
         <h2>Find us on Harbor Blvd</h2>
-        <div class="lot-gallery">
-          <figure class="g-wide"><img src="assets/photos/lot-front.jpg" alt="Vehicles parked on the Momentum lot" loading="lazy" /></figure>
-          <figure class="g-tall"><img src="assets/photos/street-sign.jpg" alt="Momentum street sign on Harbor Blvd" loading="lazy" /></figure>
-          <figure class="g-wide"><img src="assets/photos/lot-row.jpg" alt="Row of trucks, sedans, and SUVs for sale" loading="lazy" /></figure>
-          <figure class="g-tall"><img src="assets/photos/building-sign.jpg" alt="Momentum building sign" loading="lazy" /></figure>
+        <div class="lot-gallery" id="lotGallery">
+          <figure class="tall"><img src="assets/photos/street-sign-2.jpg" alt="Momentum street sign: Se Habla Español" loading="lazy" /></figure>
+          <figure><img src="assets/photos/lot-front.jpg" alt="Vehicles parked on the Momentum lot" loading="lazy" /></figure>
+          <figure class="tall"><img src="assets/photos/street-sign.jpg" alt="Momentum street sign on Harbor Blvd" loading="lazy" /></figure>
+          <figure><img src="assets/photos/lot-trucks.jpg" alt="Trucks for sale on the lot" loading="lazy" /></figure>
+          <figure class="tall"><img src="assets/photos/storefront-2.jpg" alt="Storefront at 2673 Harbor Blvd" loading="lazy" /></figure>
+          <figure><img src="assets/photos/lot-entrance.jpg" alt="Lot entrance with SUVs and sedans" loading="lazy" /></figure>
+          <figure class="tall"><img src="assets/photos/building-sign.jpg" alt="Momentum building sign" loading="lazy" /></figure>
+          <figure><img src="assets/photos/lot-row.jpg" alt="Row of trucks, sedans, and SUVs for sale" loading="lazy" /></figure>
         </div>
       </div>
     </section>
@@ -235,6 +240,13 @@
       <button class="modal-close" data-close aria-label="Close">&times;</button>
       <div id="modalBody"></div>
     </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="modal-close" aria-label="Close">&times;</button>
+    <button class="lb-nav lb-prev" aria-label="Previous photo">&#8249;</button>
+    <img alt="" />
+    <button class="lb-nav lb-next" aria-label="Next photo">&#8250;</button>
   </div>
 
   <script src="site-config.js"></script>

@@ -78,7 +78,7 @@ p { margin: 0 0 1em; }
   background:
     linear-gradient(90deg, rgba(11,13,16,.96) 0%, rgba(11,13,16,.85) 45%, rgba(11,13,16,.55) 100%),
     linear-gradient(0deg, #0b0d10 0%, transparent 40%),
-    url("assets/photos/lot-row.jpg") center 60% / cover no-repeat;
+    url("assets/photos/building-front.jpg") center 45% / cover no-repeat;
 }
 .hero-bg::after {
   content: ""; position: absolute; inset: 0;
@@ -151,14 +151,18 @@ textarea { resize: vertical; }
 
 .about-photo { aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
 .about-photo img { width: 100%; height: 100%; object-fit: cover; }
-.lot-gallery { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-top: 32px; }
-.lot-gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--card); }
-.lot-gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
-.lot-gallery .g-tall img { aspect-ratio: auto; }
-@media (max-width: 640px) {
-  .lot-gallery { grid-template-columns: 1fr; }
-  .lot-gallery .g-tall img { aspect-ratio: 3 / 4; }
-}
+.lot-gallery { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 230px; grid-auto-flow: dense; gap: 16px; margin-top: 32px; }
+.lot-gallery figure { margin: 0; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--card); cursor: zoom-in; }
+.lot-gallery figure.tall { grid-row: span 2; }
+.lot-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.lot-gallery figure:hover img { transform: scale(1.03); }
+@media (max-width: 760px) { .lot-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; gap: 10px; } }
+.lightbox { position: fixed; inset: 0; z-index: 110; background: rgba(0,0,0,.92); display: flex; align-items: center; justify-content: center; padding: 56px 16px; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; object-fit: contain; }
+.lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.1); color: #fff; border: 0; width: 44px; height: 44px; border-radius: 50%; font-size: 1.8rem; line-height: 1; cursor: pointer; }
+.lb-nav:hover { background: rgba(255,255,255,.2); }
+.lb-prev { left: 12px; } .lb-next { right: 12px; }
 .photo-placeholder { width: 100%; height: 100%; display: grid; place-items: center; color: #4a525e; text-transform: uppercase; letter-spacing: .1em; font-size: .85rem; background: linear-gradient(135deg, #1c2128, #14181d); }
 
 .contact-list { list-style: none; padding: 0; margin: 24px 0 32px; }

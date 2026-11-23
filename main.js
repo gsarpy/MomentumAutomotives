@@ -95,6 +95,24 @@
   });
   document.addEventListener("keydown", e => { if (e.key === "Escape" && !modal.hidden) closeModal(); });
 
+  // Lot gallery lightbox
+  const lb = $("#lightbox"), lbImg = $("img", lb), gal = $$("#lotGallery img");
+  let lbIdx = 0;
+  const showLb = i => { lbIdx = (i + gal.length) % gal.length; lbImg.src = gal[lbIdx].src; lbImg.alt = gal[lbIdx].alt; };
+  gal.forEach((img, i) => img.addEventListener("click", () => { showLb(i); lb.hidden = false; document.body.style.overflow = "hidden"; }));
+  const closeLb = () => { lb.hidden = true; document.body.style.overflow = ""; };
+  lb.addEventListener("click", e => {
+    if (e.target.closest(".lb-prev")) showLb(lbIdx - 1);
+    else if (e.target.closest(".lb-next")) showLb(lbIdx + 1);
+    else if (e.target !== lbImg) closeLb();
+  });
+  document.addEventListener("keydown", e => {
+    if (lb.hidden) return;
+    if (e.key === "Escape") closeLb();
+    if (e.key === "ArrowLeft") showLb(lbIdx - 1);
+    if (e.key === "ArrowRight") showLb(lbIdx + 1);
+  });
+
   // Payment calculator
   const calc = () => {
     const p = +$("#cPrice").value || 0, d = +$("#cDown").value || 0, r = (+$("#cRate").value || 0) / 1200, n = +$("#cTerm").value;
