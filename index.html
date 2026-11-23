@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Momentum Automotive | Quality Used Cars in Costa Mesa, CA</title>
+  <meta name="description" content="Momentum Automotive is an independent used car dealership in Costa Mesa, California. Hand-picked, inspected vehicles, honest pricing, and financing options." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="nav" id="top">
+    <div class="container nav-inner">
+      <a href="#top" class="brand" aria-label="Momentum Automotive home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 24"><path d="M2 22 L12 2 L20 14 L28 2 L38 22" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-text">MOMENTUM<small>AUTOMOTIVE</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inventory">Inventory</a>
+        <a href="#financing">Financing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:+10000000000" class="btn btn-sm btn-primary nav-call" data-phone-link>Call Now</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Costa Mesa, California</p>
+        <h1>Drive away with <span class="accent">momentum.</span></h1>
+        <p class="lead">Hand-picked, inspected used vehicles with straightforward pricing. A small lot, a short drive, and no pressure.</p>
+        <div class="hero-cta">
+          <a href="#inventory" class="btn btn-primary">Browse Inventory</a>
+          <a href="#contact" class="btn btn-ghost">Schedule a Test Drive</a>
+        </div>
+        <ul class="hero-stats">
+          <li><strong>Inspected</strong><span>Every vehicle</span></li>
+          <li><strong>Financing</strong><span>Options available</span></li>
+          <li><strong>Trade-Ins</strong><span>Welcome</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="inventory">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Current Inventory</p>
+            <h2>On the lot now</h2>
+          </div>
+          <div class="filters" role="group" aria-label="Filter inventory">
+            <button class="chip active" data-filter="all">All</button>
+            <button class="chip" data-filter="Sedan">Sedans</button>
+            <button class="chip" data-filter="SUV">SUVs</button>
+            <button class="chip" data-filter="Truck">Trucks</button>
+            <button class="chip" data-filter="Coupe">Coupes</button>
+          </div>
+        </div>
+        <div class="grid" id="inventoryGrid"></div>
+        <p class="muted center small">Inventory changes frequently. Call or text to confirm availability.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="why">
+      <div class="container">
+        <p class="eyebrow">Why Momentum</p>
+        <h2>Buying a used car shouldn't be a gamble.</h2>
+        <div class="features">
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/></svg>
+            </div>
+            <h3>Inspected &amp; Ready</h3>
+            <p>Each vehicle is inspected before it hits the lot, so you know what you're driving home.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3>Honest Pricing</h3>
+            <p>Clear prices up front. No surprise add-ons and no runaround.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 10h18M5 6h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2zM7 15h3"/></svg>
+            </div>
+            <h3>Financing Help</h3>
+            <p>We work with lenders to help find a payment that fits your budget.</p>
+          </article>
+          <article class="feature">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3M18 3v4h-4M6 21v-4h4"/></svg>
+            </div>
+            <h3>Trade-Ins Welcome</h3>
+            <p>Bring your current vehicle in for a fair, no-obligation offer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="financing">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Financing</p>
+          <h2>Estimate your payment</h2>
+          <p class="muted">Use the calculator for a rough monthly estimate. Actual rates and terms depend on credit approval and lender.</p>
+          <a href="#contact" class="btn btn-primary">Get Pre-Qualified</a>
+        </div>
+        <form class="calc card" id="calc" onsubmit="return false">
+          <label>Vehicle price
+            <input type="number" id="cPrice" value="18000" min="0" step="500" inputmode="numeric" />
+          </label>
+          <label>Down payment
+            <input type="number" id="cDown" value="2000" min="0" step="500" inputmode="numeric" />
+          </label>
+          <div class="row">
+            <label>APR (%)
+              <input type="number" id="cRate" value="8.9" min="0" step="0.1" inputmode="decimal" />
+            </label>
+            <label>Term
+              <select id="cTerm">
+                <option value="36">36 mo</option>
+                <option value="48">48 mo</option>
+                <option value="60" selected>60 mo</option>
+                <option value="72">72 mo</option>
+              </select>
+            </label>
+          </div>
+          <div class="calc-out">
+            <span>Estimated monthly</span>
+            <strong id="cOut">$0</strong>
+          </div>
+          <p class="tiny muted">Estimate excludes tax, title, registration, and fees.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section alt" id="about">
+      <div class="container split">
+        <div class="about-photo" aria-hidden="true">
+          <div class="photo-placeholder">Lot photo coming soon</div>
+        </div>
+        <div>
+          <p class="eyebrow">About Us</p>
+          <h2>A local dealership under new ownership</h2>
+          <p>Momentum Automotive is an independent used car dealership in Costa Mesa. We keep our inventory small on purpose so every car on the lot gets real attention, and every customer gets a straight answer.</p>
+          <p>Stop by, take a look around, and take something for a drive.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Visit or Contact</p>
+          <h2>Come see us</h2>
+          <ul class="contact-list">
+            <li><span>Address</span><strong data-address>[Street Address], Costa Mesa, CA [ZIP]</strong></li>
+            <li><span>Phone</span><a href="tel:+10000000000" data-phone-link><strong data-phone>(000) 000-0000</strong></a></li>
+            <li><span>Email</span><a href="mailto:info@example.com" data-email-link><strong data-email>info@example.com</strong></a></li>
+          </ul>
+          <h3 class="hours-title">Hours</h3>
+          <table class="hours">
+            <tr><td>Monday – Friday</td><td>10:00 AM – 6:00 PM</td></tr>
+            <tr><td>Saturday</td><td>10:00 AM – 5:00 PM</td></tr>
+            <tr><td>Sunday</td><td>By appointment</td></tr>
+          </table>
+        </div>
+        <form class="card contact-form" id="contactForm">
+          <h3>Send us a message</h3>
+          <div class="row">
+            <label>Name<input name="name" required autocomplete="name" /></label>
+            <label>Phone<input name="phone" type="tel" autocomplete="tel" /></label>
+          </div>
+          <label>Email<input name="email" type="email" autocomplete="email" /></label>
+          <label>Interested in
+            <select name="topic" id="topicSelect">
+              <option>General question</option>
+              <option>Test drive</option>
+              <option>Financing</option>
+              <option>Trade-in</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="4"></textarea></label>
+          <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+          <p class="tiny muted">Opens your email app with the message filled in.</p>
+        </form>
+      </div>
+      <div class="container map-wrap">
+        <iframe title="Map of Costa Mesa, CA" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Costa+Mesa,+CA&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand brand-footer">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 24"><path d="M2 22 L12 2 L20 14 L28 2 L38 22" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-text">MOMENTUM<small>AUTOMOTIVE</small></span>
+      </div>
+      <p class="muted small">&copy; <span id="year"></span> Momentum Automotive. Costa Mesa, CA.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="carModal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="site-config.js"></script>
+  <script src="inventory.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
